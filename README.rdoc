@@ -1,28 +1,16 @@
-== README
+== Bootstrap App using Rails4, Yeoman, Angularjs and Mongo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+angular app is in public/angular. To start it run :
+<tt>grunt serve</tt>
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Rails api access is allowed by rack-cors in config/application.rb
+<tt>
+  config.middleware.use Rack::Cors do
+    allow do
+      origins '*'
+      resource '*', :headers => :any, :methods => [:get, :post, :options, :delete, :put]
+    end
+  end
+</tt>
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
