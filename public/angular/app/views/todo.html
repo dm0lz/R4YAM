@@ -1,0 +1,27 @@
+<div ng-controller="TodoCtrl">
+  <h2>{{testText}}</h2>
+  <form ng-submit="addEntry(entry)">
+        <label>Name</label>
+        <input type="text" ng-model="entry.name"></input>
+        <label>Price</label>
+        <input type="text" ng-model="entry.price"></input>
+    <button class="btn btn-success">Create</button>
+  </form>
+  <hr>
+  <section id="todo">
+    <ul>
+      <li ng-repeat="entry in entries" ng-class="{highlight: entry.flag}">
+        <span>
+          {{entry.name}} |
+          {{entry.price | currency:"&euro;"}}
+          <input type="text" ng-model="entry.name"></input>
+          <input type="text" ng-model="entry.price"></input>
+          <button ng-click="updateEntry(entry)" class="btn btn-warning">Update</button>
+          <button ng-click="deleteEntry(entry)" class="btn btn-danger">Delete</button>
+          <button ng-click="flagEntry(entry)" class="btn btn-info">Flag</button>
+        </span>
+        <hr>
+      </li>
+    </ul>
+  </section>
+</div>
