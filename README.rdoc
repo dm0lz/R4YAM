@@ -1,6 +1,6 @@
 == Bootstrap App using Rails4, Yeoman, Angularjs and Mongo
 
-angular app is in public/angular. To start it run :
+angular app is in public/angular/. To start it run :
 <tt>grunt serve</tt>
 
 Rails api access is allowed by rack-cors in config/application.rb
