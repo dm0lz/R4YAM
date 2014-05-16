@@ -3,6 +3,7 @@ class Api::V1::EntriesController < Api::BaseController
   include EntriesHelper
 
   def index
+    #@entries = Entry.order(created_at: :desc)
     @entries = Entry.all
     filter_entries(params)
     render json: @entries, status: 200

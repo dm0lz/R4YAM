@@ -14,7 +14,7 @@ angular.module('angularArenaApp')
 
     $scope.addEntry = function(entry){
       entry = apiEntries.save(entry);
-      $scope.entries.push(entry);
+      $scope.entries.unshift(entry);
       $scope.entry = {};
     };
 
