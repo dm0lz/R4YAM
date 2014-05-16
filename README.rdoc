@@ -11,6 +11,5 @@ Rails api access is allowed by rack-cors in config/application.rb
       resource '*', :headers => :any, :methods => [:get, :post, :options, :delete, :put]
     end
   end
-</tt>
 
 
