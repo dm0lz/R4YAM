@@ -11,9 +11,13 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/todo', {
-        templateUrl: 'views/todo.html',
-        controller: 'TodoCtrl'
+      .when('/entries', {
+        templateUrl: 'views/entries.html',
+        controller: 'EntriesCtrl'
+      })
+      .when('/tabs', {
+        templateUrl: 'views/tabs.html',
+        controller: 'TabsCtrl'
       })
       .otherwise({
         redirectTo: '/'

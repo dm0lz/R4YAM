@@ -1,11 +1,12 @@
-<div ng-controller="TodoCtrl">
+<div ng-controller="EntriesCtrl">
   <h2>{{testText}}</h2>
-  <form ng-submit="addEntry(entry)">
+  <form name="entryForm" ng-submit="addEntry(entry)" novalidate>
         <label>Name</label>
-        <input type="text" ng-model="entry.name"></input>
+        <input type="text" ng-model="entry.name" required></input>
         <label>Price</label>
         <input type="text" ng-model="entry.price"></input>
     <button class="btn btn-success">Create</button>
+    entryForm is {{entryForm.$valid}}
   </form>
   <hr>
   <section id="todo">
